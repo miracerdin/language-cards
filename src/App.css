@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  margin: 0 auto;
+  height: 500px;
+  width: 500px;
+}
+.header {
+  text-align: center;
+}
+.header img {
+  max-width: 330px;
+  height: auto;
+}
+main {
+  width: 100%;
+  padding: 1rem;
+  background-color: tomato;
+  border-radius: 20px;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+article {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 200px 200px;
+  border-radius: 8px;
+  gap: 1rem;
+}
