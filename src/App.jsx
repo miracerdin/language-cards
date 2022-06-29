@@ -15,6 +15,7 @@ function App() {
           {data.map((item, index) => {
             return <Card key={index} {...item} />;
           })}
+          {/* <Card data={data} /> */}
         </article>
       </main>
     </div>
