@@ -1,14 +1,18 @@
 import cardStyle from "./Card.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Card = ({ name, img, options }) => {
   const [paragraf, setParagraf] = useState(true);
-
+  const handleClick = () => {
+    setParagraf(!paragraf);
+  };
+  useEffect(() => {
+    if (paragraf == false) {
+      const timer = setTimeout(() => setParagraf(!paragraf), 5000);
+    }
+  }, [paragraf]);
   return (
-    <div
-      className={cardStyle.parentCard}
-      onClick={() => setParagraf(!paragraf)}
-    >
+    <div className={cardStyle.parentCard} onClick={handleClick}>
       {paragraf ? (
         <div className={cardStyle.cards}>
           <img src={img} className={cardStyle.image} />
@@ -16,8 +20,8 @@ const Card = ({ name, img, options }) => {
         </div>
       ) : (
         <ul className={cardStyle.liste}>
-          {options.map((item) => {
-            return <li>{item}</li>;
+          {options.map((item, index) => {
+            return <li key={index}>{item}</li>;
           })}
         </ul>
       )}
