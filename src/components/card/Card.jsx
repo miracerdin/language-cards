@@ -17,12 +17,13 @@ const Card = ({ name, img, options }) => {
   return (
     <div className={cardStyle.parentCard} onClick={handleClick}>
       {paragraf ? (
-        <div
-          className={mouseover ? cardStyle.imagechange : cardStyle.cards}
-          onMouseOut={() => setMouseover(!mouseover)}
-          onMouseOver={() => setMouseover(!mouseover)}
-        >
-          <img src={img} className={cardStyle.image} />
+        <div className={cardStyle.cards}>
+          <img
+            src={img}
+            className={mouseover ? cardStyle.imagechange : cardStyle.image}
+            onMouseOut={() => setMouseover(!mouseover)}
+            onMouseOver={() => setMouseover(!mouseover)}
+          />
           <h4>{name}</h4>
         </div>
       ) : (
