@@ -12,9 +12,12 @@
     height: 50px;
     object-fit: contain;
     transition: transform 0.5s ease-in;
-    &:hover {
-      transform: scale(1.2);
-    }
+    // &:hover {
+    //   transform: scale(1.2);
+    // }
+  }
+  .imagechange {
+    transform: scale(1.2);
   }
   h4 {
     text-align: center;
