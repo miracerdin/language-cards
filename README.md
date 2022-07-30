@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-[Click to see the page](https://language-cards-teal.vercel.app/).
+## [Click to see the page](https://language-cards-teal.vercel.app/).
 
 ## Available Scripts
 
